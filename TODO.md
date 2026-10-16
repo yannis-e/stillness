@@ -1,6 +1,6 @@
 ## Phase 1: Foundation
 - [X] Define architecture and module boundaries.
-- [ ] Set up Nix flake, package, and development shell.
+- [X] Set up Nix flake, package, and development shell.
 - [ ] Implement CLI and configuration validation.
 - [ ] Write basic documentation.
 
