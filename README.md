@@ -27,3 +27,24 @@ A NixOS package for a distraction-free computing environment.
 stillness is designed to make distractions harder to access, not to provide an absolute security boundary. A user with sufficient administrative access may be able to disable or circumvent its restrictions.
 
 Focus sessions should use persistent, system-level enforcement where necessary and recover predictably after interruptions or unexpected shutdowns.
+
+
+# Stillness architecture
+
+```mermaid
+flowchart TD
+    CLI["stillness CLI"]
+    IPC["Unix domain socket"]
+    DAEMON["stillnessd daemon"]
+    SESSION["Session manager"]
+    STATE[("Persistent state")]
+    DNS["DNS backend"]
+    NET["Network backend"]
+
+    CLI <--> IPC
+    IPC <--> DAEMON
+    DAEMON --> SESSION
+    SESSION <--> STATE
+    DAEMON --> DNS
+    DAEMON --> NET
+```
