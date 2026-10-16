@@ -1,0 +1,41 @@
+
+# Build artifacts
+/build/
+/result
+/result-*
+
+# C compiler artifacts
+*.o
+*.a
+*.so
+*.so.*
+*.d
+
+# Debugging and profiling
+core
+core.*
+*.gcda
+*.gcno
+*.profraw
+*.profdata
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
